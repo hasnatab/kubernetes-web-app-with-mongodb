@@ -44,7 +44,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app.kubernetes.io/name: web-app-container
+    app: web-app-container
   ports:
     - protocol: TCP
       port: 3000
