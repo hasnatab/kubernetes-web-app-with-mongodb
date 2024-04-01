@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: my-app-config-map
 data:
-  mongo-endpoint: mongo-service 
+  mongo-endpoint: mongo-service

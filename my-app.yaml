@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: app-deployment
   labels:
-    app: app-deployment-metadata
+    app: webapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web-app-container
+      app: webapp
   template:
     metadata:
       labels:
-        app: web-app-container
+        app: webapp
     spec:
       containers:
-      - name: my-app
+      - name: webapp
         image: nanajanashia/k8s-demo-app:v1.0
         ports:
         - containerPort: 3000
@@ -44,9 +44,9 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: web-app-container
+    app: webapp
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      nodePort: 30010
+      nodePort: 30100
